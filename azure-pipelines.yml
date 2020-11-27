@@ -25,5 +25,12 @@ steps:
   displayName: 'Install dependencies'
 
 - script: |
-     robot --pythonpath . .
-  displayName: 'pytest'
+     robot --pythonpath . -x outputxunit.xml .
+  displayName: 'Robot Test'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFiles: outputxunit.xml
+    searchFolder: 'D:\a\1\s\'
+  condition: succeededOrFailed()
+  displayName: 'Publish Test Results outputxunit.xml'
