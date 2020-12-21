@@ -7,6 +7,7 @@ Test Teardown  Close Browser
 
 *** Test Cases ***
 Simple Search 
+        [Tags]   Smoke-simple-test
         Wait Until Page Contains Element   xpath://body[contains(@class,'homepage')]    30
         Wait Until Element Is Visible      xpath://body[contains(@class,'homepage')]    30
         
