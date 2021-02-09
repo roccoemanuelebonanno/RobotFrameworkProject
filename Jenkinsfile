@@ -3,7 +3,7 @@ pipeline {
   stages {
   stage('intialize') {
       steps {
-        sh 'echo "PATH= ${PATH}'
+        sh 'echo "PATH= ${PATH}"'
       }
     }
   stage('Run Robot Tests') {
