@@ -3,8 +3,8 @@ Library    SeleniumLibrary
 
 *** Variables ***
 
-${BROWSER}   Chrome    #Firefox    Edge  
-${HOME_URL}  https://www.ibs.it
+${BROWSER}   Chrome    #Firefox    Edge
+${HOME_URL}  https://www.ibs.it   #ciao
 
 
 
