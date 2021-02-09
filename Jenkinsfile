@@ -1,18 +1,15 @@
 pipeline {
   agent any
   stages {
-  stage('Stage 1') {
+  stage('intialize') {
       steps {
-        script {
-          echo 'Stage 1'
-        }
+        sh 'echo "PATH= ${PATH}'
       }
     }
-  stage('Stage 2') {
+  stage('Run Robot Tests') {
       steps {
-        script {
-          echo 'Stage 2'
-        }
+        sh 'python3 --outputdir reports .'
+        sh 'exit 0'
       }
     }
   }
