@@ -1,10 +1,7 @@
 pipeline {
-  agent {
-      label 'qa pipeline'
-  }
+  agent any
   environment {
     QA_SERVER = 'https://qa.application.com/'
-    
   }
   stages {
         stage('intialize') {
