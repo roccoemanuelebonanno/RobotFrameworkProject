@@ -31,7 +31,7 @@ jobs:
       - name: Install unzip
         run: sudo apt-get install unzip
       - name: Download chromedriver
-        run: wget -N https://chromedriver.storage.googleapis.com/90.0.4430.24/chromedriver_linux64.zip -P ~/Downloads
+        run: wget -N http://chromedriver.storage.googleapis.com/91.0.4472.19/chromedriver_linux64.zip -P ~/Downloads
       - name: Unzip chromedriver  
         run: unzip ~/Downloads/chromedriver_linux64.zip -d ~/Downloads
       - name: Set chromedriver in path folder
