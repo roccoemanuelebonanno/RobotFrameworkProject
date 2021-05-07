@@ -38,6 +38,8 @@ jobs:
         run: sudo mv ~/Downloads/chromedriver /usr/local/bin 
       - name: Set chromedriver permission
         run: sudo chmod 777 /usr/local/bin/chromedriver
+      - name: Check Driver 
+        run: sudo ls -la /usr/local/bin
       - name: Execute test
         run: robot . 
 
