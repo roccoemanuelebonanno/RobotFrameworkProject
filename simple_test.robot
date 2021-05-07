@@ -8,7 +8,14 @@ Test Teardown  Close Browser
 Simple Search 
         [Tags]   Smoke-simple-test
 
-        Open Browser    ${HOME_URL}  Firefox  
+        ${chrome_options} =     Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+        Call Method    ${chrome_options}   add_argument    headless
+        Call Method    ${chrome_options}   add_argument    disable-gpu
+        ${options}=     Call Method     ${chrome_options}    to_capabilities      
+
+        Open Browser    ${HOME_URL}  Chrome    desired_capabilities=${options}
+
+
 
 
         Wait Until Page Contains Element   xpath://body[contains(@class,'homepage')]    30
