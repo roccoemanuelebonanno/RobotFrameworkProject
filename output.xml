@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.1 (Python 3.9.5 on darwin)" generated="20210507 12:53:45.297" rpa="false" schemaversion="2">
+<suite id="s1" name="RobotFrameworkProject" source="/Users/rocco.bonanno/RobotFrameworkProject">
+<suite id="s1-s1" name="Simple Test" source="/Users/rocco.bonanno/RobotFrameworkProject/simple_test.robot">
+<test id="s1-s1-t1" name="Simple Search">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>${HOME_URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Maximize Browser Window</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${HOME_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210507 12:53:45.504" level="INFO">Opening browser 'Chrome' to base url 'https://www.ibs.it'.</msg>
+<status status="PASS" starttime="20210507 12:53:45.504" endtime="20210507 12:53:49.585"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210507 12:53:49.585" endtime="20210507 12:53:49.784"/>
+</kw>
+<status status="PASS" starttime="20210507 12:53:45.503" endtime="20210507 12:53:49.784"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath://body[contains(@class,'homepage')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210507 12:53:49.784" endtime="20210507 12:53:49.795"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://body[contains(@class,'homepage')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210507 12:53:49.795" endtime="20210507 12:53:49.810"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id:inputSearch</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210507 12:53:49.810" endtime="20210507 12:53:49.816"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:inputSearch</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210507 12:53:49.817" endtime="20210507 12:53:49.830"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:inputSearch</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210507 12:53:49.831" level="INFO">Clicking element 'id:inputSearch'.</msg>
+<status status="PASS" starttime="20210507 12:53:49.830" endtime="20210507 12:53:49.938"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:inputSearch</arg>
+<arg>Ken Follet</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210507 12:53:49.939" level="INFO">Typing text 'Ken Follet' into text field 'id:inputSearch'.</msg>
+<status status="PASS" starttime="20210507 12:53:49.939" endtime="20210507 12:53:50.109"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>id:inputSearch</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210507 12:53:50.110" level="INFO">Sending key(s) ('ENTER',) to id:inputSearch element.</msg>
+<msg timestamp="20210507 12:53:50.426" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20210507 12:53:50.426" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20210507 12:53:50.109" endtime="20210507 12:53:52.273"/>
+</kw>
+<kw name="Wait Until Location Contains" library="SeleniumLibrary">
+<arg>algolia-search</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" starttime="20210507 12:53:52.274" endtime="20210507 12:53:52.281"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210507 12:53:52.282" endtime="20210507 12:53:52.385"/>
+</kw>
+<tag>Smoke-simple-test</tag>
+<status status="PASS" starttime="20210507 12:53:45.502" endtime="20210507 12:53:52.385"/>
+</test>
+<test id="s1-s1-t2" name="Test">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>${HOME_URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Maximize Browser Window</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${HOME_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210507 12:53:52.389" level="INFO">Opening browser 'Chrome' to base url 'https://www.ibs.it'.</msg>
+<status status="PASS" starttime="20210507 12:53:52.388" endtime="20210507 12:53:56.243"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210507 12:53:56.244" endtime="20210507 12:53:56.542"/>
+</kw>
+<status status="PASS" starttime="20210507 12:53:52.388" endtime="20210507 12:53:56.542"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20210507 12:53:56.543" level="FAIL">Keyword 'BuiltIn.Log To Console' expected 1 to 3 arguments, got 0.</msg>
+<status status="FAIL" starttime="20210507 12:53:56.542" endtime="20210507 12:53:56.543"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210507 12:53:56.543" endtime="20210507 12:53:56.634"/>
+</kw>
+<status status="FAIL" starttime="20210507 12:53:52.387" endtime="20210507 12:53:56.634">Keyword 'BuiltIn.Log To Console' expected 1 to 3 arguments, got 0.</status>
+</test>
+<status status="FAIL" starttime="20210507 12:53:45.325" endtime="20210507 12:53:56.636"/>
+</suite>
+<status status="FAIL" starttime="20210507 12:53:45.299" endtime="20210507 12:53:56.638"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Smoke-simple-test</stat>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="RobotFrameworkProject">RobotFrameworkProject</stat>
+<stat pass="1" fail="1" skip="0" id="s1-s1" name="Simple Test">RobotFrameworkProject.Simple Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
