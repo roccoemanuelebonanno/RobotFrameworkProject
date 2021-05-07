@@ -34,7 +34,7 @@ jobs:
       - name: Unzip chromedriver  
         run: unzip ~/Downloads/chromedriver_linux64.zip -d ~/Downloads
       - name: Set chromedriver in path folder
-        run: mv ~/Downloads/chromedriver /usr/local/bin
+        run: sudo mv ~/Downloads/chromedriver /usr/local/bin
       - name: Execute test
         run: robot . 
 
