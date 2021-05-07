@@ -28,7 +28,7 @@ jobs:
       - name: Install reqirements
         run: pip install -r requirements.txt
       - name: Install unzip
-        run: apt-get install unzip
+        run: sudo apt-get install unzip
       - name: Download chromedriver
         run: wget -N http://chromedriver.storage.googleapis.com/2.29/chromedriver_linux64.zip -P ~/Downloads
       - name: Unzip chromedriver  
