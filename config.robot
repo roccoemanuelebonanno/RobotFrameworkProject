@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 
 *** Variables ***
 
-${BROWSER}   chromedriver    #Firefox    Edge
+${BROWSER}   webdriver.chromedriver.driver    #Firefox    Edge
 ${HOME_URL}  https://www.ibs.it   #ciao
 
 ${var}  myvar
