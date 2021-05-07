@@ -8,10 +8,7 @@ Test Teardown  Close Browser
 Simple Search 
         [Tags]   Smoke-simple-test
 
-        ${list} =     Create List    --start-maximized    --disable-web-security
-        ${args} =     Create Dictionary    args=${list}
-        ${desired caps} =     Create Dictionary    platform=${OS}     chromeOptions=${args}
-        Open Browser    ${HOME_URL}  browser=${BROWSER}  desired_capabilities=${desired caps}
+        Open Browser    ${HOME_URL}  browser=${BROWSER}  options=binary_location="/usr/local/bin/chromedriver"
 
 
         Wait Until Page Contains Element   xpath://body[contains(@class,'homepage')]    30
