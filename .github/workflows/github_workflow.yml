@@ -33,12 +33,11 @@ jobs:
         run: wget -N http://chromedriver.storage.googleapis.com/2.29/chromedriver_linux64.zip -P ~/Downloads
       - name: Unzip chromedriver  
         run: unzip ~/Downloads/chromedriver_linux64.zip -d ~/Downloads
-      - name: list file in Download
-        run: ls -la ~/Downloads
-      - name: Run a one-line script
-        run: pip install -r requirements.txt && robot . 
-      - name: set chromedriver in path folder
+      - name: Set chromedriver in path folder
         run: mv ~/Downloads/chromedriver /usr/local/bin
+      - name: Execute test
+        run: robot . 
+
       
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
