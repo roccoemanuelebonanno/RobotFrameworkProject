@@ -8,7 +8,7 @@ Test Teardown  Close Browser
 Simple Search 
         [Tags]   Smoke-simple-test
 
-        Open Browser    ${HOME_URL}  browser=${BROWSER}  options=binary_location="/usr/local/bin/chromedriver"
+        Open Browser    ${HOME_URL}  Firefox  
 
 
         Wait Until Page Contains Element   xpath://body[contains(@class,'homepage')]    30
